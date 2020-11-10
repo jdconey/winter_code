@@ -5,7 +5,7 @@ This is the code that gets all the webcam images. The images are downloaded ever
 
 The bash scripts need no other dependencies if you want them to run **locally**. You may wish to change the names of the directories. To pull and push from GitHub, I use [Keychain](https://www.funtoo.org/Keychain), having linked the corresponding SSH key up to my GitHub account so that I am not prompted for my password every time cron calls the `full.sh` script.
 
-The `bennevis.py` scripts requires (I have put which versions I am using in brackets):
+The `bennevis.py` script requires the following Python (I'm using Python 3 obvs) packages (I have put which versions I am using in brackets):
  - `bs4` (0.0.1)
  - `requests` (2.21.0)
  - `shutil`
