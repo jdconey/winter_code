@@ -13,7 +13,7 @@ The `bennevis.py` scripts requires (I have put which versions I am using in brac
  - `time`
  - `wget` (3.2)
 
-The `updates.py` script requires:
+The `updates.py` script (which deals with adding captions to the CIC Hut images, and making the "last updated" jpgs - so isn't necessary for a "rugged" look, but hey ho, what can I say) requires:
  - `cv2` (`opencv-python`) (4.4.0.46)
      - I had trouble installing opencv, but with some help from [StackOverflow](https://stackoverflow.com/questions/57211068/raspberry-pi-4-pip-install-opencv-python), I managed to get it to work having run the following:
  ```
