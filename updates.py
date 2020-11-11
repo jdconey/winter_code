@@ -28,7 +28,7 @@ cv2.imwrite(fileloc+'upd.jpg',img)
 
 
 text_file = open(fileloc+'ben_nevis/ben.txt', "r")
-ben_text = text_file.read()
+ben_text = text_file.read()+' (GMT+1)'
 text_file.close() 
 
 ben = cv2.imread(fileloc+'ben_nevis/current/cic.jpg')
@@ -37,7 +37,7 @@ cv2.putText(ben,ben_text,(0,30),font, 1, (0,0,0),2,cv2.LINE_AA)
 cv2.imwrite(fileloc+'ben_nevis/current/cic_time.jpg',ben)
 
 text_file = open(fileloc+'ben_nevis/ben_zoom.txt', "r")
-benz_text = text_file.read()
+benz_text = text_file.read()+ ' (GMT+1)'
 text_file.close() 
 
 benz = cv2.imread(fileloc+'ben_nevis/current/cic_zoom.jpg')
