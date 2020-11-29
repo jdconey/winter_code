@@ -26,3 +26,13 @@ The `updates.py` script (which deals with adding captions to the CIC Hut images,
 
  - `numpy` (1.16.2)
  - `matplotlib` (3.0.2)
+
+The `screengrab.py` and `morlich.py` scripts take screenshots of live video feeds and require the following Python packages:
+
+- `selenium` (3.141.0) - you also need a webdriver for your processor. Getting one to work with chromium (the browser on my Pi) and the Pi's processor was a pain, but I solved it by installing [`chromium-chromedriver`](https://ivanderevianko.com/2020/01/selenium-chromedriver-for-raspberrypi). 
+- `cv2` (`opencv-python` - see notes above about installing opencv) (4.4.0.46)
+- `numpy` (1.16.2)
+- `matplotlib` (3.0.2)
+- `shutil`
+- `os`
+- `time`
