@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 
 import shutil
 import os
+import os.path
 
 import time
 
@@ -29,5 +30,9 @@ driver.close()
 
 path3 = pat2
 
-os.makedirs(pat2);
-shutil.copyfile('/media/pi/D608-D7E6/scottish_winter/glencoe/current/'+camnm, path3+camnm)
+if os.path.isdir(pat2) ==False:
+    os.makedirs(pat2)
+    print('making directory')
+else:
+    print('no need to make dirs')
+shutil.copyfile('/media/pi/D608-D7E6/scottish_winter/glencoe/current/'+camnm, pat2+camnm)
