@@ -17,6 +17,7 @@ git pull
 . /home/pi/winter_code/nevis_range.sh
 python3 /home/pi/winter_code/bennevis.py
 python3 /home/pi/winter_code/updates.py
+DISPLAY=:0 python3 /home/pi/winter_code/screengrab.py
 
 git add *
 git commit -m pi_$TOD
