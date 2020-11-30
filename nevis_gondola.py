@@ -18,7 +18,7 @@ pre='/media/pi/D608-D7E6/scottish_winter/nevis_range/'
 curr_time = time.strftime('%Y-%m-%d_%H',time.localtime())
 mins = time.strftime('%M',time.localtime())
 if mins[1]!='0':
-    mins.replace('1','0')
+    mins=mins.replace('1','0')
 curr_time = curr_time+mins
 yr = time.strftime('%Y',time.localtime())
 mon = time.strftime('%m',time.localtime())
