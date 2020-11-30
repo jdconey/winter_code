@@ -3,7 +3,7 @@ Code for the Scottish Winter Webcam Project
 
 This is the code that gets all the webcam images. The images are downloaded every time the script is run. `cron` is used to schedule the `full.sh` bash script which calls each of the bash/python scripts in turn.
 
-The bash scripts need no other dependencies if you want them to run **locally**. You may wish to change the names of the directories. To pull and push from GitHub, I use [Keychain](https://www.funtoo.org/Keychain), having linked the corresponding SSH key up to my GitHub account so that I am not prompted for my password every time cron calls the `full.sh` script.
+The bash scripts need no other dependencies if you want them to run **locally**. You may wish to change the names of the directories. To pull and push from GitHub, I use [Keychain](https://www.funtoo.org/Keychain), having linked the corresponding SSH key up to my GitHub account so that I am not prompted for my password every time `cron` calls the `full.sh` script.
 
 The `bennevis.py` script requires the following Python (I'm using Python 3 obvs) packages (I have put which versions I am using in brackets):
  - `bs4` (0.0.1)
@@ -27,7 +27,7 @@ The `updates.py` script (which deals with adding captions to the CIC Hut images,
  - `numpy` (1.16.2)
  - `matplotlib` (3.0.2)
 
-The `screengrab.py` and `morlich.py` scripts take screenshots of live video feeds and require the following Python packages:
+The `screengrab.py`, `morlich.py` and `nevis_gondola.py` scripts take screenshots of live video feeds and require the following Python packages:
 
 - `selenium` (3.141.0) - you also need a webdriver for your processor. Getting one to work with chromium (the browser on my Pi) and the Pi's processor was a pain, but I solved it by installing [`chromium-chromedriver`](https://ivanderevianko.com/2020/01/selenium-chromedriver-for-raspberrypi). 
 - `cv2` (`opencv-python` - see notes above about installing opencv) (4.4.0.46)
