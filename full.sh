@@ -18,6 +18,8 @@ git pull
 python3 /home/pi/winter_code/bennevis.py
 DISPLAY=:0 python3 /home/pi/winter_code/screengrab.py
 DISPLAY=:0 python3 /home/pi/winter_code/morlich.py
+DISPLAY=:0 python3 /home/pi/winter_code/nevis_gondola.py
+
 python3 /home/pi/winter_code/updates.py
 
 git add *
