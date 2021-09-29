@@ -33,6 +33,12 @@ wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD http://ww
 
 
 
+wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD https://www.argyll-bute.gov.uk/sites/default/files/roadcams/786_cam1.jpg --no-check-certificate
+wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD https://www.argyll-bute.gov.uk/sites/default/files/roadcams/786_cam2.jpg --no-check-certificate
+wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD https://www.argyll-bute.gov.uk/sites/default/files/roadcams/1214_cam1.jpg --no-check-certificate
+wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD https://www.argyll-bute.gov.uk/sites/default/files/roadcams/1214_cam2.jpg --no-check-certificate
+
+
 
 
 
