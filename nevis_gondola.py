@@ -33,23 +33,28 @@ driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver",options=option
 #driver.set_window_size(1024, 768) # set the window size that you need 
 driver.get('https://www.nevisrange.co.uk/webcams/')
 
-elem = driver.find_element_by_tag_name("h3")
-ac = ActionChains(driver)
 time.sleep(2)
+
+elem = driver.find_element_by_xpath('//*[@id="sub-content-wrapper"]/div[1]/div/div[1]/iframe')
+#elem = driver.find_element_by_tag_name("h3")
+print(elem)
+#ac = ActionChains(driver)
+elem.click()
 #driver.save_screenshot('/media/pi/D608-D7E6/scottish_winter/cairngorm/current/'+camnm)
-ac.move_to_element(elem).move_by_offset(0, 200).click().perform()
+#ac.move_to_element(elem).move_by_offset(0, 200).click().perform()
 time.sleep(2)
+elem.click()
 driver.execute_script("window.scrollTo(0,300);")
 time.sleep(1)
 driver.save_screenshot('/home/pi/Pictures/gondola.png')
 print(pat2+camnm)
 driver.close()
 
-if os.path.isdir(pat2) ==False:
-    os.makedirs(pat2)
-    print('making directory')
-else:
-    print('no need to make dirs')
+#if os.path.isdir(pat2) ==False:
+#    os.makedirs(pat2)
+#    print('making directory')
+#else:
+#    print('no need to make dirs')
     
 gondola = cv2.imread('/home/pi/Pictures/gondola.png')
 crop_gondola = gondola[214:618, 105:824]
@@ -57,5 +62,5 @@ crop_gondola = gondola[214:618, 105:824]
 font = cv2.FONT_HERSHEY_SIMPLEX
 #cv2.putText(crop_morlich,c2,(0,470),font, 1, (0,0,0),2,cv2.LINE_AA)
 #cv2.imwrite('/home/pi/Pictures/gondola_crop.png',crop_gondola)
-cv2.imwrite('/media/pi/D608-D7E6/scottish_winter/nevis_range/current/'+camnm,crop_gondola)
-shutil.copyfile('/media/pi/D608-D7E6/scottish_winter/nevis_range/current/'+camnm, pat2+camnm)
+#cv2.imwrite('/media/pi/D608-D7E6/scottish_winter/nevis_range/current/'+camnm,crop_gondola)
+#shutil.copyfile('/media/pi/D608-D7E6/scottish_winter/nevis_range/current/'+camnm, pat2+camnm)

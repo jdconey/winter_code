@@ -11,11 +11,11 @@ import os
 import time
 import wget
 
-webcams={'lochlinne':'http://ah.cdn.licr.co.uk/images/webcams/ben-nevis-and-fort-william-static.jpg'
+webcams={#'lochlinne':'http://ah.cdn.licr.co.uk/images/webcams/ben-nevis-and-fort-william-static.jpg'
          #'corran':'http://www.lochaberwx.co.uk/jpgwebcam.jpg'
         }
-webcams2={'cic':['https://www.smc.org.uk/cicwebcam/cic_weather',1],
-         'cic_zoom':['https://www.smc.org.uk/cicwebcam/cic_weather',2],
+webcams2={ #'cic':['https://www.smc.org.uk/cicwebcam/cic_weather',1],
+         #'cic_zoom':['https://www.smc.org.uk/cicwebcam/cic_weather',2],
           'torlundy':["https://visitfortwilliam.co.uk/webcam_images",1]
         }
 

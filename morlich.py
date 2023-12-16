@@ -29,23 +29,35 @@ driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver",options=option
 #driver.set_window_size(1024, 768) # set the window size that you need 
 driver.get('https://www.lochmorlich.com/webcam')
 
-elem = driver.find_element_by_tag_name("li")
-print(elem)
-ac = ActionChains(driver)
-time.sleep(4)
+#driver.get("http://www.google.com")
+el=driver.find_elements_by_xpath("/html/body/div[1]/div[1]/div[2]")[0]
+#el=driver.find_elements_by_xpath('/*[@id="fp-hlsjs"]/div[2]')
+#el=driver.find_elements_by_xpath("/html/body/header/div/ul/li[6]/a")[0]
+print(el)
+action = webdriver.common.action_chains.ActionChains(driver)
+action.move_to_element_with_offset(el, 5, 5)
+action.click()
+
+#elem = driver.find_element_by_tag_name("li")
+#print(elem)
+#ac = ActionChains(driver)
+#time.sleep(4)
 #driver.save_screenshot('/media/pi/D608-D7E6/scottish_winter/cairngorm/current/'+camnm)
 #ac.move_to_element(elem).context_click().perform()
-ac.move_to_element(elem).move_by_offset(230, 280).click()
-ac.move_to_element(elem).move_by_offset(230,280).click().build().perform();
+#ac.move_to_element(elem).move_by_offset(230, 280).click()
+#ac.move_to_element(elem).move_by_offset(230,280).click().build().perform();
 #ac.move_to_element(elem).move_by_offset(200,250).context_click().perform()
 #ac.move_to_element(elem).move_by_offset(230,280).click().perform()
 
-time.sleep(1)
+action.pause(3)
+
+action.click()
+action.perform()
 #ac.move_to_element_with_offset(driver.find_element_by_tag_name('body'), 0,0)
 #ac.move_by_offset(5, 1).click().perform()
 
-driver.execute_script("window.scrollTo(0,300);")
-time.sleep(2)
+#driver.execute_script("window.scrollTo(0,300);")
+#time.sleep(5)
 #driver.swipe(100, 100, 100, 100, 50);
 time.sleep(2)
 driver.save_screenshot('/home/pi/Pictures/morlich_ground.png')

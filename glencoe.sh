@@ -13,7 +13,7 @@ wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD http://ww
 
 
 
-wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD http://www.winterhighland.info/cams/glencoe/mainbasin.jpeg --no-check-certificate
+#wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD http://www.winterhighland.info/cams/glencoe/mainbasin.jpeg --no-check-certificate
 
 wget -P /media/pi/D608-D7E6/scottish_winter/glencoe/$YR/$MON/$DAY/$TOD http://www.winterhighland.info/cams/glencoe/flypaper.jpeg --no-check-certificate
 

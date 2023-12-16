@@ -18,11 +18,11 @@ git pull
 . /home/pi/winter_code/glencoe.sh
 . /home/pi/winter_code/nevis_range.sh
 python3 /home/pi/winter_code/bennevis.py
-python3 /home/pi/winter_code/screengrab.py
-python3 /home/pi/winter_code/morlich.py
-python3 /home/pi/winter_code/nevis_gondola.py
+DISPLAY=:0 python3 /home/pi/winter_code/screengrab.py
+DISPLAY=:0 python3 /home/pi/winter_code/morlich.py
+#python3 /home/pi/winter_code/nevis_gondola.py
 
-python3 /home/pi/winter_code/updates.py
+#python3 /home/pi/winter_code/updates.py
 
 git add *
 git commit -m pi_$TOD
